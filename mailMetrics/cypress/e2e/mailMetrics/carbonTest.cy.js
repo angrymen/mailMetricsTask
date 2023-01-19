@@ -47,6 +47,7 @@ describe("Carbon footprint calculator", () => {
         cy.log("Double value is: " + doubleEmissionAfterReduction);
 
         //5. Send the double value of the result achieved in the calculator through an email to andrzej.pieta@mailmetrics.com
+        //You can use my email adress michalmadejski00@gmail.com - is verified on the Mailosaur page
         
         const serverID = "jmybfqol";
         const sendEmailAdress = "andrzej.pieta@mailmetrics.com";

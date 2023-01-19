@@ -5,9 +5,9 @@
     "passes": 2,
     "pending": 0,
     "failures": 0,
-    "start": "2023-01-19T13:38:19.756Z",
-    "end": "2023-01-19T13:38:46.188Z",
-    "duration": 14117,
+    "start": "2023-01-19T14:26:45.726Z",
+    "end": "2023-01-19T14:27:24.354Z",
+    "duration": 20404,
     "testsRegistered": 2,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "578e60c7-fbe0-4fc4-83be-fa28ce3dca3b",
+      "uuid": "57bfac56-a907-47f0-b7ff-9344276c9180",
       "title": "",
       "fullFile": "cypress\\e2e\\mailMetrics\\herokuappTest.cy.js",
       "file": "cypress\\e2e\\mailMetrics\\herokuappTest.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "1501d0c5-b0ec-442e-876b-8d5050c566fc",
+          "uuid": "2396e5fc-832f-4e9c-b2f5-31549a4461e5",
           "title": "visual regresion",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "visual regresion - test herokuApp",
               "fullTitle": "visual regresion visual regresion - test herokuApp",
               "timedOut": null,
-              "duration": 3185,
+              "duration": 3584,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "//6. Then go to http://the-internet.herokuapp.com/dynamic_content?with_content=static, click \n//on “click here”, wait until content is refreshed and count number of characters in the last \n//section which gets refreshed\ncy.visit(Cypress.env(\"herokuApp\"));\ncy.document().then(image => {\n  cy.wrap(image).toMatchSnapshot().as(\"zd1\").then(() => {\n    cy.xpath(\"//p//a\").click().then(() => {\n      cy.document().then(imageAfterRefresh => {\n        cy.wrap(imageAfterRefresh).toMatchSnapshot().as(\"zd2\");\n      });\n    });\n  });\n});\ncy.get(\"@zd1\").should(\"not.equal\", \"@zd2\").then(() => {\n  cy.log(\"Test pass\");\n});\ncy.xpath('//*[@class=\"large-10 columns\"]').eq(2).invoke(\"text\").then(getText => {\n  cy.log(\"The length of a string: \" + getText.length);\n});",
               "err": {},
-              "uuid": "95da0d35-b754-4bb1-9b9b-25b082c77023",
-              "parentUUID": "1501d0c5-b0ec-442e-876b-8d5050c566fc",
+              "uuid": "9d893733-c861-4532-b510-2ca73f1e5d51",
+              "parentUUID": "2396e5fc-832f-4e9c-b2f5-31549a4461e5",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "95da0d35-b754-4bb1-9b9b-25b082c77023"
+            "9d893733-c861-4532-b510-2ca73f1e5d51"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 3185,
+          "duration": 3584,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -76,7 +76,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "4d7af537-ff33-4825-a602-7588108bd17b",
+      "uuid": "ec1f067b-ceab-4981-a365-8fd76aefed35",
       "title": "",
       "fullFile": "cypress\\e2e\\mailMetrics\\carbonTest.cy.js",
       "file": "cypress\\e2e\\mailMetrics\\carbonTest.cy.js",
@@ -85,7 +85,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "d417b33a-749c-4a3a-bba7-b3a5189e2d67",
+          "uuid": "843b7b17-967a-4c57-add3-b2ac723e7f3b",
           "title": "Carbon footprint calculator",
           "fullFile": "",
           "file": "",
@@ -96,7 +96,7 @@
               "title": "Carbon footprint calculator - test",
               "fullTitle": "Carbon footprint calculator Carbon footprint calculator - test",
               "timedOut": null,
-              "duration": 10932,
+              "duration": 16820,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -105,20 +105,20 @@
               "context": null,
               "code": "//1. Go to website mailmetrics.com\ncy.visit(Cypress.env(\"mailMetricsUrl\")); //2. Verify that on the main page there is “Carbon footprint calculator”\n_HomePage.default.checkCarboCalcIsVisible(\"Carbon footprint calculator\"); //3. Go to “Find out more”\n\n_HomePage.default.checkFindOutMoreBtn(\"Find out more\").click(); //4. Fill in the calculator with the following data\n\n_CarbonCalcPage.default.checkCalculatorFooterIsVisible();\n_CarbonCalcPage.default.checkLettersAmountIsVisible();\n_CarbonCalcPage.default.setLetterAmount(\"1000\"); //Verify that on the clac page there are all of the elements and fill the form\n\n_CarbonCalcPage.default.checkPagesAmountIsVisible();\n_CarbonCalcPage.default.setPagesAmount(\"2\");\n_CarbonCalcPage.default.checkEmailsAmountIsVisible();\n_CarbonCalcPage.default.setEmailsAmount(\"35000\");\n_CarbonCalcPage.default.checkEmailsRangeIsVisible();\n_CarbonCalcPage.default.setEmailsRange(70);\n_CarbonCalcPage.default.checkRangeIsChange(70); //Verify emission after Reduction\n\n_CarbonCalcPage.default.checkEmissionAfterReduction().invoke(\"text\").then(emissionAfterReduction => {\n  let doubleEmissionAfterReduction = parseFloat(emissionAfterReduction) * 2;\n  cy.log(\"Double value is: \" + doubleEmissionAfterReduction); //5. Send the double value of the result achieved in the calculator through an email to andrzej.pieta@mailmetrics.com\n  const serverID = \"jmybfqol\";\n  const sendEmailAdress = \"michalmadejski00@gmail.com\";\n  const subject = \"Email from Michal Madejski - automation test\";\n  const text = `The double value of the result achieved in the calculator is ${doubleEmissionAfterReduction}`;\n  _EmailSender.default.sendEmail(serverID, sendEmailAdress, subject, text).then(result => {\n    expect(result.text.body).to.equal(`The double value of the result achieved in the calculator is ${doubleEmissionAfterReduction}`);\n  });\n});",
               "err": {},
-              "uuid": "3ae07483-8e1b-4449-9b96-66dc1bae01b3",
-              "parentUUID": "d417b33a-749c-4a3a-bba7-b3a5189e2d67",
+              "uuid": "413bd8f2-90c6-4b89-b71d-8284b19f1688",
+              "parentUUID": "843b7b17-967a-4c57-add3-b2ac723e7f3b",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "3ae07483-8e1b-4449-9b96-66dc1bae01b3"
+            "413bd8f2-90c6-4b89-b71d-8284b19f1688"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 10932,
+          "duration": 16820,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

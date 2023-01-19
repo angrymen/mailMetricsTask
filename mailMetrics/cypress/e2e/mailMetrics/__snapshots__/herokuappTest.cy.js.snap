@@ -1,6 +1,6 @@
 exports[`visual regresion > visual regresion - test herokuApp #0`] =
 {
-  "jQuery111305670568378704184": 1,
+  "jQuery111304246473638588888": 1,
   "location": {
     "ancestorOrigins": {
       "0": "http://the-internet.herokuapp.com"
@@ -20,7 +20,7 @@ exports[`visual regresion > visual regresion - test herokuApp #0`] =
 
 exports[`visual regresion > visual regresion - test herokuApp #1`] =
 {
-  "jQuery1113004909122897345641": 1,
+  "jQuery11130411117664926381": 1,
   "location": {
     "ancestorOrigins": {
       "0": "http://the-internet.herokuapp.com"

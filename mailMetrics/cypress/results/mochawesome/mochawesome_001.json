@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2023-01-19T13:38:38.771Z",
-    "end": "2023-01-19T13:38:46.188Z",
-    "duration": 7417,
+    "start": "2023-01-19T14:27:14.722Z",
+    "end": "2023-01-19T14:27:24.354Z",
+    "duration": 9632,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "578e60c7-fbe0-4fc4-83be-fa28ce3dca3b",
+      "uuid": "57bfac56-a907-47f0-b7ff-9344276c9180",
       "title": "",
       "fullFile": "cypress\\e2e\\mailMetrics\\herokuappTest.cy.js",
       "file": "cypress\\e2e\\mailMetrics\\herokuappTest.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "1501d0c5-b0ec-442e-876b-8d5050c566fc",
+          "uuid": "2396e5fc-832f-4e9c-b2f5-31549a4461e5",
           "title": "visual regresion",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "visual regresion - test herokuApp",
               "fullTitle": "visual regresion visual regresion - test herokuApp",
               "timedOut": null,
-              "duration": 3185,
+              "duration": 3584,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "//6. Then go to http://the-internet.herokuapp.com/dynamic_content?with_content=static, click \n//on “click here”, wait until content is refreshed and count number of characters in the last \n//section which gets refreshed\ncy.visit(Cypress.env(\"herokuApp\"));\ncy.document().then(image => {\n  cy.wrap(image).toMatchSnapshot().as(\"zd1\").then(() => {\n    cy.xpath(\"//p//a\").click().then(() => {\n      cy.document().then(imageAfterRefresh => {\n        cy.wrap(imageAfterRefresh).toMatchSnapshot().as(\"zd2\");\n      });\n    });\n  });\n});\ncy.get(\"@zd1\").should(\"not.equal\", \"@zd2\").then(() => {\n  cy.log(\"Test pass\");\n});\ncy.xpath('//*[@class=\"large-10 columns\"]').eq(2).invoke(\"text\").then(getText => {\n  cy.log(\"The length of a string: \" + getText.length);\n});",
               "err": {},
-              "uuid": "95da0d35-b754-4bb1-9b9b-25b082c77023",
-              "parentUUID": "1501d0c5-b0ec-442e-876b-8d5050c566fc",
+              "uuid": "9d893733-c861-4532-b510-2ca73f1e5d51",
+              "parentUUID": "2396e5fc-832f-4e9c-b2f5-31549a4461e5",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "95da0d35-b754-4bb1-9b9b-25b082c77023"
+            "9d893733-c861-4532-b510-2ca73f1e5d51"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 3185,
+          "duration": 3584,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

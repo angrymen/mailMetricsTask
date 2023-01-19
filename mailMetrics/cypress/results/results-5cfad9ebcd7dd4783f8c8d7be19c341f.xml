@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="23.152" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2023-01-19T14:26:45" tests="0" file="cypress\e2e\mailMetrics\carbonTest.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Carbon footprint calculator" timestamp="2023-01-19T14:26:46" tests="1" time="22.861" failures="0">
+    <testcase name="Carbon footprint calculator Carbon footprint calculator - test" time="16.820" classname="Carbon footprint calculator - test">
+    </testcase>
+  </testsuite>
+</testsuites>

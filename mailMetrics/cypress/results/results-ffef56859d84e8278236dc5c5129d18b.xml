@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Mocha Tests" time="7.417" tests="1" failures="0">
-  <testsuite name="Root Suite" timestamp="2023-01-19T13:38:38" tests="0" file="cypress\e2e\mailMetrics\herokuappTest.cy.js" time="0.000" failures="0">
-  </testsuite>
-  <testsuite name="visual regresion" timestamp="2023-01-19T13:38:39" tests="1" time="7.186" failures="0">
-    <testcase name="visual regresion visual regresion - test herokuApp" time="3.185" classname="visual regresion - test herokuApp">
-    </testcase>
-  </testsuite>
-</testsuites>

@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2023-01-19T13:38:19.756Z",
-    "end": "2023-01-19T13:38:35.205Z",
-    "duration": 15449,
+    "start": "2023-01-19T14:26:45.726Z",
+    "end": "2023-01-19T14:27:08.878Z",
+    "duration": 23152,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "4d7af537-ff33-4825-a602-7588108bd17b",
+      "uuid": "ec1f067b-ceab-4981-a365-8fd76aefed35",
       "title": "",
       "fullFile": "cypress\\e2e\\mailMetrics\\carbonTest.cy.js",
       "file": "cypress\\e2e\\mailMetrics\\carbonTest.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "d417b33a-749c-4a3a-bba7-b3a5189e2d67",
+          "uuid": "843b7b17-967a-4c57-add3-b2ac723e7f3b",
           "title": "Carbon footprint calculator",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Carbon footprint calculator - test",
               "fullTitle": "Carbon footprint calculator Carbon footprint calculator - test",
               "timedOut": null,
-              "duration": 10932,
+              "duration": 16820,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "//1. Go to website mailmetrics.com\ncy.visit(Cypress.env(\"mailMetricsUrl\")); //2. Verify that on the main page there is “Carbon footprint calculator”\n_HomePage.default.checkCarboCalcIsVisible(\"Carbon footprint calculator\"); //3. Go to “Find out more”\n\n_HomePage.default.checkFindOutMoreBtn(\"Find out more\").click(); //4. Fill in the calculator with the following data\n\n_CarbonCalcPage.default.checkCalculatorFooterIsVisible();\n_CarbonCalcPage.default.checkLettersAmountIsVisible();\n_CarbonCalcPage.default.setLetterAmount(\"1000\"); //Verify that on the clac page there are all of the elements and fill the form\n\n_CarbonCalcPage.default.checkPagesAmountIsVisible();\n_CarbonCalcPage.default.setPagesAmount(\"2\");\n_CarbonCalcPage.default.checkEmailsAmountIsVisible();\n_CarbonCalcPage.default.setEmailsAmount(\"35000\");\n_CarbonCalcPage.default.checkEmailsRangeIsVisible();\n_CarbonCalcPage.default.setEmailsRange(70);\n_CarbonCalcPage.default.checkRangeIsChange(70); //Verify emission after Reduction\n\n_CarbonCalcPage.default.checkEmissionAfterReduction().invoke(\"text\").then(emissionAfterReduction => {\n  let doubleEmissionAfterReduction = parseFloat(emissionAfterReduction) * 2;\n  cy.log(\"Double value is: \" + doubleEmissionAfterReduction); //5. Send the double value of the result achieved in the calculator through an email to andrzej.pieta@mailmetrics.com\n  const serverID = \"jmybfqol\";\n  const sendEmailAdress = \"michalmadejski00@gmail.com\";\n  const subject = \"Email from Michal Madejski - automation test\";\n  const text = `The double value of the result achieved in the calculator is ${doubleEmissionAfterReduction}`;\n  _EmailSender.default.sendEmail(serverID, sendEmailAdress, subject, text).then(result => {\n    expect(result.text.body).to.equal(`The double value of the result achieved in the calculator is ${doubleEmissionAfterReduction}`);\n  });\n});",
               "err": {},
-              "uuid": "3ae07483-8e1b-4449-9b96-66dc1bae01b3",
-              "parentUUID": "d417b33a-749c-4a3a-bba7-b3a5189e2d67",
+              "uuid": "413bd8f2-90c6-4b89-b71d-8284b19f1688",
+              "parentUUID": "843b7b17-967a-4c57-add3-b2ac723e7f3b",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "3ae07483-8e1b-4449-9b96-66dc1bae01b3"
+            "413bd8f2-90c6-4b89-b71d-8284b19f1688"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 10932,
+          "duration": 16820,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
