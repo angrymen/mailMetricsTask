@@ -49,7 +49,7 @@ describe("Carbon footprint calculator", () => {
         //5. Send the double value of the result achieved in the calculator through an email to andrzej.pieta@mailmetrics.com
         
         const serverID = "jmybfqol";
-        const sendEmailAdress = "michalmadejski00@gmail.com";
+        const sendEmailAdress = "andrzej.pieta@mailmetrics.com";
         const subject = "Email from Michal Madejski - automation test";
         const text = `The double value of the result achieved in the calculator is ${doubleEmissionAfterReduction}`
 
