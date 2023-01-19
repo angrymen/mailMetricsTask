@@ -1,0 +1,38 @@
+exports[`visual regresion > visual regresion - test herokuApp #0`] =
+{
+  "jQuery111305670568378704184": 1,
+  "location": {
+    "ancestorOrigins": {
+      "0": "http://the-internet.herokuapp.com"
+    },
+    "hash": "",
+    "host": "the-internet.herokuapp.com",
+    "hostname": "the-internet.herokuapp.com",
+    "href": "http://the-internet.herokuapp.com/dynamic_content?with_content=static",
+    "origin": "http://the-internet.herokuapp.com",
+    "pathname": "/dynamic_content",
+    "port": "",
+    "protocol": "http:",
+    "search": "?with_content=static"
+  },
+  "referrer": ""
+};
+
+exports[`visual regresion > visual regresion - test herokuApp #1`] =
+{
+  "jQuery1113004909122897345641": 1,
+  "location": {
+    "ancestorOrigins": {
+      "0": "http://the-internet.herokuapp.com"
+    },
+    "hash": "",
+    "host": "the-internet.herokuapp.com",
+    "hostname": "the-internet.herokuapp.com",
+    "href": "http://the-internet.herokuapp.com/dynamic_content?with_content=static",
+    "origin": "http://the-internet.herokuapp.com",
+    "pathname": "/dynamic_content",
+    "port": "",
+    "protocol": "http:",
+    "search": "?with_content=static"
+  }
+};

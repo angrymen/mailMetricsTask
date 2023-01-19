@@ -1,0 +1,6 @@
+{
+    "env":{
+      "mailMetricsUrl": "https://www.mailmetrics.com/",
+      "herokuApp":"http://the-internet.herokuapp.com/dynamic_content?with_content=static"
+      }
+}
